@@ -1,4 +1,4 @@
-# dotnet docker secrets
+# (dotnet) Extensions.Configuration.Docker
 A dotnet custom configuration provider supporting docker secrets.
 
 See also:
