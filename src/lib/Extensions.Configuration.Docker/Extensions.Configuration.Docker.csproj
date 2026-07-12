@@ -4,17 +4,21 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
     <RootNamespace>Ichyd.Extensions.Configuration.Docker</RootNamespace>
+    <IsPackable>true</IsPackable>
     <PackageId>Ichyd.Extensions.Configuration.Docker</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>Ichyd</Authors>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
     <PackageDescription>A dotnet configuration provider for docker secrets.</PackageDescription>
     <RepositoryUrl>https://github.com/Ichyd/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
-<ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.9" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.9" />
   </ItemGroup>

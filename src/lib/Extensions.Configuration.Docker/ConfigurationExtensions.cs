@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace Ichyd.Extensions.Configuration.Docker
 {
+    /// <summary>
+    /// Extension methods for adding <see cref="DockerSecretsProvider"/> to a <see cref="IConfigurationBuilder"/>.
+    /// </summary>
     [ExcludeFromCodeCoverage]
     public static class ConfigurationManagerExtensions
     {
