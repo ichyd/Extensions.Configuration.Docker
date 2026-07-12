@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Hi_saac.Extensions.Configuration.Docker</RootNamespace>
+    <PackageId>Hi_saac.Extensions.Configuration.Docker</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>hoeyi</Authors>
+    <Company>hoeyi</Company>
+    <PackageDescription>A dotnet configuration provider for docker secrets.</PackageDescription>
+    <RepositoryUrl>https://github.com/Hi_saac/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
+  </PropertyGroup>
+
+<ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.9" />
+  </ItemGroup>
+
+</Project>
