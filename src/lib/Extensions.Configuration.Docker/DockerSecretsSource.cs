@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 
-namespace Hisaac.Extensions.Configuration.Docker
+namespace Hi_saac.Extensions.Configuration.Docker
 {
     /// <summary>
     /// Represents a <b>docker secrets</b> source of configuration key/values for an application.
