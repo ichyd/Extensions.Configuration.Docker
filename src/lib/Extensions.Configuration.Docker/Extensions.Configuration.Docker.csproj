@@ -8,8 +8,8 @@
     <RootNamespace>Ichyd.Extensions.Configuration.Docker</RootNamespace>
     <PackageId>Ichyd.Extensions.Configuration.Docker</PackageId>
     <Version>1.0.0</Version>
-    <Authors>hoeyi</Authors>
-    <Company>hoeyi</Company>
+    <Authors>Ichyd</Authors>
+    <Company>Ichyd</Company>
     <PackageDescription>A dotnet configuration provider for docker secrets.</PackageDescription>
     <RepositoryUrl>https://github.com/Ichyd/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
   </PropertyGroup>
