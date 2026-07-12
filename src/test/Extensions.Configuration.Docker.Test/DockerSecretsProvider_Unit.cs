@@ -6,7 +6,7 @@ using Xunit.Sdk;
 namespace Extensions.Configuration.Docker.Test
 {
     [Trait(nameof(TestAttributeNames.Category), "Unit")]
-    public class DockerSecretsProvider_Unit
+    public partial class DockerSecretsProvider_Unit
     {
         [Theory]
         [InlineData("")]
@@ -71,6 +71,30 @@ namespace Extensions.Configuration.Docker.Test
             Assert.Throws<NotSupportedException>(
                 () => provider.Set("TEST_KEY", "TEST_VALUE")
             );
+        }
+
+    }
+
+    public partial class DockerSecretsProvider_Unit : IClassFixture<UnitFixture>
+    {
+        private readonly UnitFixture _fixture;
+        public DockerSecretsProvider_Unit(UnitFixture fixture)
+        {
+            ArgumentNullException.ThrowIfNull(fixture);
+            _fixture = fixture;
+        }
+
+        [Fact]
+        public void DockerSecrets_Get_ValidPath_Returns_ExpectedString()
+        {
+            // Arrange
+            string expectedKey = "SAMPLE_SECRET"; // see docker-compose.yml for devcontainer            
+            // Act
+            
+            string? observedValue = _fixture.Configuration[expectedKey];
+
+            // Assert
+            Assert.Equal(expected: "SOME SECRET TEXT", observedValue);
         }
     }
 }

@@ -5,3 +5,9 @@ services:
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
+    secrets:
+        - SAMPLE_SECRET
+
+secrets:
+  SAMPLE_SECRET:
+    file: ${HOME}/.docker-secrets/sample_secret.txt
