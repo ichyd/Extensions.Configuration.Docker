@@ -35,9 +35,7 @@ namespace Hisaac.Extensions.Configuration.Docker
         public override void Load()
         {
             foreach(var file in Directory.EnumerateFiles(_secretsPath))
-            {
-                Data.Add(file, ReadFile(file));
-            }
+                Data.Add(Path.GetFileName(file), null);
         }
 
         /// <inheritdoc/>
@@ -63,9 +61,9 @@ namespace Hisaac.Extensions.Configuration.Docker
             if(string.IsNullOrEmpty(key))
                 return null;
 
-            using StreamReader sr = new($"{_secretsPath}/{key}");
+            string? value = File.ReadAllText($"{_secretsPath}/{key}");
 
-            return sr.ReadToEnd();
+            return value;
         }
     }
 }

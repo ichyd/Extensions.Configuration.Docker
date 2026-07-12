@@ -10,7 +10,6 @@ namespace Extensions.Configuration.Docker.Test
         public UnitFixture()
         {
             Configuration = new ConfigurationBuilder()
-                                .AddJsonFile("appsettings.json")
                                 .AddDockerSecrets()
                                 .Build();
                                 

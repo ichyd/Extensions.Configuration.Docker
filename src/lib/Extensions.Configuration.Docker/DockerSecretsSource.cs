@@ -15,8 +15,8 @@ namespace Hisaac.Extensions.Configuration.Docker
         /// <summary>
         /// Constructs a new instance of <see cref="DockerSecretsSource"/>.
         /// </summary>
-        /// <param name="secretsPath">Path to the secrets location. Default is <em>/run/secrets</em>.</param>
-        public DockerSecretsSource(string secretsPath = "/run/secrets")
+        /// <param name="secretsPath">Path to the secrets location.</param>
+        public DockerSecretsSource(string secretsPath)
         {
             _secretsPath = secretsPath;
         }
