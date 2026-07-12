@@ -15,6 +15,11 @@ namespace Ichyd.Extensions.Configuration.Docker
     {
         private string _secretsPath;
 
+        /// <summary>
+        /// Creates a new instance of <see cref="DockerSecretsProvider"/>.
+        /// </summary>
+        /// <param name="secretsPath">Path to the secrets store. Typically, <em>/run/secrets/{secret_id}</em>.</param>
+        /// <exception cref="InvalidOperationException"></exception>
         public DockerSecretsProvider(string secretsPath)
         {
             ArgumentException.ThrowIfNullOrEmpty(secretsPath);

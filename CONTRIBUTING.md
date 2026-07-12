@@ -1,9 +1,9 @@
-# Contributing to [PROJECT NAME HERE] #
+# Contributing to <em>(dotnet) Extensions.Configuration.Docker</em>
 
 * [Commit Message Guidelines](#commit-message-guidelines)
 * [Object Naming Conventions](#object-naming-conventions)
 
-## Commit Message Guidelines ##
+## Commit Message Guidelines
 
 The structure of these guidelines are based on the [Angular convetion](
 https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#commit) and 
@@ -16,7 +16,7 @@ Commit messages should follow the format:
 [optional footer]
 ```
 
-### Type ###
+### Type
 Must be one of the following:
 
 * **build**: Changes that affect the build system or external dependencies
@@ -26,19 +26,13 @@ Must be one of the following:
 * **perf**: A code change that improves performance
 * **refactor**: A code change that neither fixes a bug nor adds a feature
 * **revert**: Reverts commit `<hash>`.
-* **style**: Changes that do not affect the meaning of the code 
-(white-space, formatting, missing semi-colons, etc)
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 * **test**: Adding missing tests or correcting existing tests
 
-### Scope ###
-*Describe how `scope` is defined in the context of contributing to this project.
+### Scope
+Scope refers to the libraries impacted, e.g., `Docker` or `SecureJson`.
 
-Example: 
-```
-Examples here.
-```
-
-### Subject ###
+### Subject
 The subject contains a succinct description of the change:
 
 * Use the imperative, present tense
@@ -60,6 +54,3 @@ BREAKING CHANGE: Ends support for [NAME] API
 
 Resolves #42 (where #42 is the GitHub issue no.)
 ```
-
-## Object Naming Conventions ##
-*Define object naming conventions specific to this project.*
