@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Hi_saac.Extensions.Configuration.Docker
+namespace Ichyd.Extensions.Configuration.Docker
 {
     [ExcludeFromCodeCoverage]
     public static class ConfigurationManagerExtensions

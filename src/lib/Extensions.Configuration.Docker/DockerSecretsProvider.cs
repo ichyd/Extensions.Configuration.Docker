@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Primitives;
 
-namespace Hi_saac.Extensions.Configuration.Docker
+namespace Ichyd.Extensions.Configuration.Docker
 {
     /// <summary>
     /// Provides <b>docker secrets</b> configuration providder key/values for an application.
