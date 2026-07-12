@@ -4,23 +4,43 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
-  <PropertyGroup>
     <RootNamespace>Ichyd.Extensions.Configuration.Docker</RootNamespace>
+  </PropertyGroup>
+
+  <!-- NuGet package details -->
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.*</AssemblyFileVersion>
     <IsPackable>true</IsPackable>
     <PackageId>Ichyd.Extensions.Configuration.Docker</PackageId>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageVersion>1.0.0</PackageVersion>
+    <Title>dotnet Extensions.Configuration.Docker</Title>
     <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
     <PackageDescription>A dotnet configuration provider for docker secrets.</PackageDescription>
     <RepositoryUrl>https://github.com/Ichyd/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <!-- Build metadata, excl. git commit in InformationalVersion -->
+  <ItemGroup>
+    <!-- Include must be the fully qualified .NET type name of the Attribute to create. -->
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <!-- _Parameter1, _Parameter2, etc. correspond to the
+          matching parameter of a constructor of that .NET attribute type -->
+      <_Parameter1>BuildDate</_Parameter1>
+      <_Parameter2>$(Date)</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.9" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+      <None Include="../../../README.md" Pack="true" PackagePath="/"/>
+  </ItemGroup>
 </Project>
