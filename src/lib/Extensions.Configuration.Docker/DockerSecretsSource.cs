@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 
 namespace Hisaac.Extensions.Configuration.Docker
@@ -6,6 +7,7 @@ namespace Hisaac.Extensions.Configuration.Docker
     /// <summary>
     /// Represents a <b>docker secrets</b> source of configuration key/values for an application.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public sealed class DockerSecretsSource : IConfigurationSource
     {
         private string _secretsPath;
