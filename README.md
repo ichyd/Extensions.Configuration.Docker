@@ -12,7 +12,7 @@ $ dotnet nuget add source --name github "https://nuget.pkg.github.com/ichyd/inde
 
 If you need to push packages:
 ```bash
-$ dotnet nuget add source --username hoeyi --password $GITHUB_PAT --store-password-in-clear-text --name github "https://nuget.pkg.github.com/ichyd/index.json"
+$ dotnet nuget add source --username $GITHUB_USER --password $GITHUB_PAT --store-password-in-clear-text --name github "https://nuget.pkg.github.com/ichyd/index.json"
 # Push the package to the GitHub NuGet repository
 $ dotnet nuget push "bin/Release/Ichyd.Extensions.Configuration.Docker.1.0.0.nupkg" --api-key $GITHUB_PAT --source "github"
 ```
