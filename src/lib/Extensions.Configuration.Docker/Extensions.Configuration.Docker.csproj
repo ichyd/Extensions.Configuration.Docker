@@ -15,7 +15,7 @@
     <IsPackable>true</IsPackable>
     <PackageId>Ichyd.Extensions.Configuration.Docker</PackageId>
     <PackageVersion>1.0.1</PackageVersion>
-    <Title>dotnet Extensions.Configuration.Docker</Title>
+    <Title>Ichyd.Extensions.Configuration.Docker</Title>
     <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
     <PackageDescription>A dotnet configuration provider using docker secrets.</PackageDescription>
