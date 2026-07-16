@@ -9,11 +9,11 @@ using Microsoft.Extensions.Primitives;
 namespace Ichyd.Extensions.Configuration.Docker
 {
     /// <summary>
-    /// Provides <b>docker secrets</b> configuration providder key/values for an application.
+    /// Provides <b>docker secrets</b> configuration provider key/values for an application.
     /// </summary>
     public sealed class DockerSecretsProvider : ConfigurationProvider
     {
-        private string _secretsPath;
+        private readonly string _secretsPath;
 
         /// <summary>
         /// Creates a new instance of <see cref="DockerSecretsProvider"/>.

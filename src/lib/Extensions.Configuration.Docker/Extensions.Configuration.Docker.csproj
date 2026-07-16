@@ -9,6 +9,7 @@
 
   <!-- NuGet package details -->
   <PropertyGroup>
+    <AssemblyName>Ichyd.Extensions.Configuration.Docker</AssemblyName>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <AssemblyFileVersion>1.0.0.*</AssemblyFileVersion>
     <IsPackable>true</IsPackable>
@@ -17,7 +18,7 @@
     <Title>dotnet Extensions.Configuration.Docker</Title>
     <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
-    <PackageDescription>A dotnet configuration provider for docker secrets.</PackageDescription>
+    <PackageDescription>A dotnet configuration provider using docker secrets.</PackageDescription>
     <RepositoryUrl>https://github.com/Ichyd/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
