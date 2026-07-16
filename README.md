@@ -20,11 +20,6 @@ $ dotnet nuget add source --username $GITHUB_USER --password $GITHUB_PAT --store
 $ dotnet add package Ichyd.Extensions.Configuration.Docker --version 1.0.0
 ```
 
-**To push the package to GitHub:**
-```bash
-$ dotnet nuget push "bin/Release/Ichyd.Extensions.Configuration.Docker.1.0.0.nupkg" --api-key $GITHUB_PAT --source "github"
-```
-
 ## Usage
 Once the package referenced is added or restored, use the extension methods to modify the `IConfigurationBuilder`.
 ```csharp
