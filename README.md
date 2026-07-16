@@ -10,7 +10,7 @@ A NuGet package may be installed from GitHub:
 $ dotnet nuget add source --name github "https://nuget.pkg.github.com/ichyd/index.json"
 ```
 
-**To authenticae:**
+**To authenticate:**
 ```bash
 $ dotnet nuget add source --username $GITHUB_USER --password $GITHUB_PAT --store-password-in-clear-text --name github "https://nuget.pkg.github.com/ichyd/index.json"
 ```
