@@ -10,11 +10,11 @@
   <!-- NuGet package details -->
   <PropertyGroup>
     <AssemblyName>Ichyd.Extensions.Configuration.Docker</AssemblyName>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <AssemblyFileVersion>1.0.1.*</AssemblyFileVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.*</AssemblyFileVersion>
     <IsPackable>true</IsPackable>
     <PackageId>Ichyd.Extensions.Configuration.Docker</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Title>Ichyd.Extensions.Configuration.Docker</Title>
     <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
