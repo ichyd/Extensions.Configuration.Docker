@@ -19,7 +19,7 @@
     <Authors>hoeyi</Authors>
     <Company>Ichyd</Company>
     <PackageDescription>A dotnet configuration provider using docker secrets.</PackageDescription>
-    <RepositoryUrl>https://github.com/Ichyd/dotnet-Extensions.Configuration.Docker</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Ichyd/Extensions.Configuration.Docker</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
