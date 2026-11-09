@@ -1,0 +1,52 @@
+name: Publish NuGet package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  SOLUTION: src/Extensions.Configuration.Docker.sln
+  PROJECT: src/lib/Extensions.Configuration.Docker/Extensions.Configuration.Docker.csproj
+  NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore ${{ env.SOLUTION }}
+
+      - name: Build
+        run: dotnet build ${{ env.SOLUTION }} -c Release --no-restore
+
+      - name: Test
+        run: dotnet test ${{ env.SOLUTION }} -c Release --no-build
+
+      - name: Pack
+        run: dotnet pack ${{ env.PROJECT }} -c Release --no-build -o ./artifacts
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nupkg
+          path: ./artifacts/*.nupkg
+
+      - name: Push to GitHub Packages
+        run: >
+          dotnet nuget push ./artifacts/*.nupkg
+          --source ${{ env.NUGET_SOURCE }}
+          --api-key ${{ secrets.GITHUB_TOKEN }}
+          --skip-duplicate
