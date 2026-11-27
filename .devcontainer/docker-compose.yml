@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   dev_dotnet_docker:
-    image: mcr.microsoft.com/devcontainers/dotnet:10.0-noble
+    image: mcr.microsoft.com/devcontainers/dotnet:10.0
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
