@@ -1,13 +1,14 @@
 version: '3.8'
 services:
   dev_dotnet_docker:
-    image: mcr.microsoft.com/devcontainers/dotnet:10.0-noble
+    image: mcr.microsoft.com/devcontainers/dotnet:10.0
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
     secrets:
         - SAMPLE_SECRET
+    env_file: ".env"
 
 secrets:
   SAMPLE_SECRET:
-    file: ${HOME}/.docker-secrets/sample_secret.txt
+    environment: SECRET_FOR_TEST_RUNS

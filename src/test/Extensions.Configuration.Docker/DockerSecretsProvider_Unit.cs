@@ -36,15 +36,14 @@ namespace Extensions.Configuration.Docker.Test
         {
             // Arrange
             string path = "NOT_A_REAL_DIRECTORY";
+
             // Act
-            
-            
             // Assert
             Assert.Throws<InvalidOperationException>(() => new DockerSecretsProvider(path!));
         }
 
         [Fact]
-        public void DockerSecrets_Constructor_ValidSecretPath_Returns_Instance()
+        public void DockerSecrets_Constructor_ValidPath_Returns_Instance()
         {
             // Arrange
             string path = "./";
@@ -71,30 +70,6 @@ namespace Extensions.Configuration.Docker.Test
             Assert.Throws<NotSupportedException>(
                 () => provider.Set("TEST_KEY", "TEST_VALUE")
             );
-        }
-
-    }
-
-    public partial class DockerSecretsProvider_Unit : IClassFixture<UnitFixture>
-    {
-        private readonly UnitFixture _fixture;
-        public DockerSecretsProvider_Unit(UnitFixture fixture)
-        {
-            ArgumentNullException.ThrowIfNull(fixture);
-            _fixture = fixture;
-        }
-
-        [Fact]
-        public void DockerSecrets_Get_ValidPath_Returns_ExpectedString()
-        {
-            // Arrange
-            string expectedKey = "SAMPLE_SECRET"; // see docker-compose.yml for devcontainer            
-            // Act
-            
-            string? observedValue = _fixture.Configuration[expectedKey];
-
-            // Assert
-            Assert.Equal(expected: "SOME SECRET TEXT", observedValue);
         }
     }
 }

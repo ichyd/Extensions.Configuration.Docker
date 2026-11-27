@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="lib/Extensions.Configuration.Docker/Extensions.Configuration.Docker.csproj" />
+  <Project Path="test/Extensions.Configuration.Docker/Extensions.Configuration.Docker.Test.csproj" />
+</Solution>
