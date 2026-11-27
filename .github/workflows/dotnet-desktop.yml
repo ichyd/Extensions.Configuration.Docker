@@ -5,7 +5,12 @@ on:
     branches: [main]
     paths:
       - 'src/**'
-      - '.github/workflows/publish.yml'
+      - '.github/workflows/dotnet-desktop.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - '.github/workflows/dotnet-desktop.yml'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +18,7 @@ permissions:
   packages: write
 
 env:
-  SOLUTION: src/Extensions.Configuration.Docker.sln
+  SOLUTION: src/Extensions.Configuration.Docker.slnx
   PROJECT: src/lib/Extensions.Configuration.Docker/Extensions.Configuration.Docker.csproj
   NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
 
@@ -34,17 +39,20 @@ jobs:
         run: dotnet build ${{ env.SOLUTION }} -c Release --no-restore
 
       - name: Test
-        run: dotnet test ${{ env.SOLUTION }} -c Release --no-build
+        run: dotnet test ${{ env.SOLUTION }} -c Release --no-build --filter "Category!=Integration"
 
       - name: Pack
+        if: github.event_name != 'pull_request'
         run: dotnet pack ${{ env.PROJECT }} -c Release --no-build -o ./artifacts
 
       - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request'
         with:
           name: nupkg
           path: ./artifacts/*.nupkg
 
       - name: Push to GitHub Packages
+        if: github.event_name != 'pull_request'
         run: >
           dotnet nuget push ./artifacts/*.nupkg
           --source ${{ env.NUGET_SOURCE }}
