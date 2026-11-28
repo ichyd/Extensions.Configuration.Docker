@@ -29,7 +29,8 @@
 					],
 				"settings": {
 					"telemetry.enableTelemetry": false,
-					"dotnetAcquisitionExtension.enableTelemetry": false
+					"dotnetAcquisitionExtension.enableTelemetry": false,
+					"remote.autoForwardPorts": false
 		            }
 				}
 			},
