@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'src/**'
-      - '.github/workflows/publish.yml'
+      - '.github/workflows/publish-nuget.yml'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +13,7 @@ permissions:
   packages: write
 
 env:
-  SOLUTION: src/Extensions.Configuration.Docker.sln
+  SOLUTION: src/Extensions.Configuration.Docker.slnx
   PROJECT: src/lib/Extensions.Configuration.Docker/Extensions.Configuration.Docker.csproj
   NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
 
